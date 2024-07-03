@@ -23,6 +23,13 @@ export default defineNuxtConfig({
       Components({
         resolvers: [NaiveUiResolver()]
       })
-    ]
+    ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/styles/index.scss" as *;'
+        }
+      }
+    }
   }
 })
